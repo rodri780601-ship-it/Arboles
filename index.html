@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Árboles Nativos de la Zona Central de Chile</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,700;1,300&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Header & Navigation -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <span class="logo-icon">🌿</span> FloraCentral Chile
+            </a>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#bosque-sclerofilo">Bosque Esclerófilo</a></li>
+                    <li><a href="#especies">Especies</a></li>
+                    <li><a href="#conservacion">Conservación</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <span class="badge">Patrimonio Natural de Chile</span>
+            <h1>Árboles Nativos de la Zona Central</h1>
+            <p>Descubre el tesoro botánico del ecosistema mediterráneo chileno: un hotspot de biodiversidad único en el mundo, caracterizado por su resiliencia y valor ecológico.</p>
+            <div class="hero-buttons">
+                <a href="#especies" class="btn btn-primary">Explorar Especies</a>
+                <a href="#bosque-sclerofilo" class="btn btn-secondary">Aprender Más</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Context Section -->
+    <section id="bosque-sclerofilo" class="section bg-light">
+        <div class="container">
+            <div class="section-title">
+                <h2>El Bosque Esclerófilo</h2>
+                <p>Un ecosistema adaptado a la sequía y la radiación solar</p>
+            </div>
+            <div class="grid grid-2">
+                <div class="card p-4">
+                    <h3>¿Qué significa "Esclerófilo"?</h3>
+                    <p>El término proviene del griego <em>skleros</em> (duro) y <em>phyllon</em> (hoja). Hace referencia a las hojas duras, coriáceas y perennes de estas plantas, diseñadas para resistir las largas sequías del verano mediterráneo y evitar la pérdida de agua por transpiración.</p>
+                </div>
+                <div class="card p-4">
+                    <h3>Importancia Ecológica</h3>
+                    <p>La zona central de Chile es uno de los 35 "hotspots" mundialmente reconocidos de biodiversidad. Estos bosques protegen las cuencas hidrográficas, evitan la erosión de los suelos de la Cordillera de la Costa y de los Andes, y albergan numerosa fauna endémica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Catalog / Species Grid -->
+    <section id="especies" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Catálogo de Especies</h2>
+                <p>Selecciona una categoría o busca por nombre para explorar los árboles emblemáticos</p>
+            </div>
+
+            <!-- Controls: Filter & Search -->
+            <div class="controls-bar">
+                <div class="search-box">
+                    <input type="text" id="searchInput" placeholder="Buscar por nombre o hábitat...">
+                </div>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="todos">Todos</button>
+                    <button class="filter-btn" data-filter="esclerofilo">Esclerófilo</button>
+                    <button class="filter-btn" data-filter="higrofilo">Higrófilo (Quebradas)</button>
+                    <button class="filter-btn" data-filter="vulnerable">Vulnerable / Amenazado</button>
+                </div>
+            </div>
+
+            <!-- Grid Container for Trees -->
+            <div class="grid grid-3" id="treeGrid">
+                <!-- Trees inserted via JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Conservation Section -->
+    <section id="conservacion" class="section bg-dark text-white">
+        <div class="container">
+            <div class="section-title">
+                <h2 style="color: #fff;">Conservación y Amenazas</h2>
+                <p style="color: #a3b899;">El ecosistema más amenazado de Chile necesita nuestra protección</p>
+            </div>
+            <div class="grid grid-3">
+                <div class="feature-box">
+                    <div class="feature-icon">🔥</div>
+                    <h4>Incendios Forestales</h4>
+                    <p>La expansión urbana y las actividades humanas aumentan la frecuencia de incendios, afectando especies de lento crecimiento.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">☀️</div>
+                    <h4>Megasequía</h4>
+                    <p>Más de un decenio de precipitaciones por debajo de la media histórica está sometiendo a un gran estrés hídrico al matorral y bosque nativo.</p>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon">🌱</div>
+                    <h4>Restauración Ecológica</h4>
+                    <p>Proyectos de reforestación con especies autóctonas y educación ambiental son clave para garantizar su supervivencia a futuro.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal for Detailed Tree View -->
+    <div id="treeModal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div id="modalBody">
+                <!-- Dynamic Content -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container text-center">
+            <p><strong>FloraCentral Chile</strong> — Información basada en fuentes públicas del Ministerio del Medio Ambiente (MMA) y CONAF.</p>
+            <p><small>&copy; 2026 Guía Digital de la Flora Central de Chile.</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
