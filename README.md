@@ -1,5 +1,6 @@
 # Sitio Web: Árboles de la Zona Central de Chile
 
+
 Este proyecto es una página web informativa e interactiva sobre la flora nativa del ecosistema mediterráneo y bosque esclerófilo de la zona central de Chile, basada en información técnica y de conservación de fuentes públicas (como el Ministerio del Medio Ambiente MMA y CONAF).
 
 ## Estructura de Archivos
