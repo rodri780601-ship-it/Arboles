@@ -1,18 +1,20 @@
 /* Visual Variables & Palette */
 :root {
-    --primary: #2d5a27;
-    --primary-dark: #1e3d1a;
-    --primary-light: #4e8746;
-    --accent: #d97724;
-    --bg-light: #f4f6f0;
-    --bg-white: #ffffff;
-    --bg-dark: #1a2619;
-    --text-dark: #222222;
-    --text-muted: #666666;
-    --border-color: #e2e8f0;
+    --primary: #1B5E20;
+    --primary-dark: #0D3B14;
+    --primary-light: #4CAF50;
+    --secondary: #1565C0;
+    --secondary-dark: #0D47A1;
+    --secondary-light: #42A5F5;
+    --bg-light: #F4FAF8;
+    --bg-white: #FFFFFF;
+    --bg-dark: #0F2D3A;
+    --text-dark: #1F2937;
+    --text-muted: #64748B;
+    --border-color: #D6E4E5;
     --font-heading: 'Merriweather', serif;
     --font-body: 'Plus Jakarta Sans', sans-serif;
-    --shadow: 0 4px 15px rgba(0,0,0,0.08);
+    --shadow: 0 6px 20px rgba(0,0,0,0.08);
     --transition: all 0.3s ease;
 }
 
@@ -93,7 +95,7 @@ h1, h2, h3, h4 {
 /* Hero Section */
 .hero {
     position: relative;
-    background: linear-gradient(135deg, #2d5a27 0%, #1e3d1a 100%);
+    background: linear-gradient(135deg, #0D47A1 0%, #1565C0 40%, #1B5E20 100%);
     color: white;
     padding: 100px 0 120px 0;
     text-align: center;
@@ -463,4 +465,52 @@ footer {
     .search-box input {
         width: 100%;
     }
+}
+
+
+/* ===== Mejoras visuales verde + azul ===== */
+
+.navbar{
+    background: rgba(255,255,255,.92);
+    backdrop-filter: blur(12px);
+}
+
+.nav-links a:hover{
+    color: var(--secondary);
+}
+
+.btn-primary{
+    background: linear-gradient(135deg,var(--secondary),var(--primary));
+    color:#fff;
+}
+
+.btn-primary:hover{
+    transform: translateY(-2px);
+}
+
+.card{
+    border-radius:16px;
+}
+
+.card:hover{
+    box-shadow:0 20px 40px rgba(21,101,192,.12);
+}
+
+.tree-img-wrapper{
+    background: linear-gradient(135deg,#E8F5E9,#E3F2FD);
+}
+
+.search-box input:focus{
+    border-color:var(--secondary);
+    box-shadow:0 0 0 4px rgba(66,165,245,.15);
+}
+
+.filter-btn.active,
+.filter-btn:hover{
+    background: linear-gradient(135deg,var(--secondary),var(--primary));
+    border-color:transparent;
+}
+
+footer{
+    background: linear-gradient(135deg,#0D3B14,#0F2D3A);
 }
